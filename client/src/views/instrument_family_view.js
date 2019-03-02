@@ -19,7 +19,7 @@ bindEvents () {
   });
 };
 
-// 2. refactored method syntax
+// 3. refactored method syntax
 render(family) {
   this.container.innerHTML = '';
 
@@ -34,6 +34,13 @@ render(family) {
 
   const instrumentList = this.createInstrumentList(family.instruments);
   this.container.appendChild(instrumentList);
+};
+
+// 4. refactored method syntax
+createElement (elementType, text) {
+  const element = document.createElement(elementType);
+  element.textContent = text;
+  return element;
 };
 
 }
@@ -64,11 +71,12 @@ render(family) {
 //  this.container.appendChild(instrumentList);
 //};
 
-InstrumentFamilyView.prototype.createElement = function (elementType, text) {
-  const element = document.createElement(elementType);
-  element.textContent = text;
-  return element;
-};
+// 4. Replace with method syntax
+//InstrumentFamilyView.prototype.createElement = function (elementType, text) {
+//  const element = document.createElement(elementType);
+//  element.textContent = text;
+//  return element;
+//};
 
 InstrumentFamilyView.prototype.createInstrumentList = function (instruments) {
   const list = document.createElement('ul');
