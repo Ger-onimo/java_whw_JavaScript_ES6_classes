@@ -23,7 +23,7 @@ bindEvents() {
 populate(instrumentFamilyData) {
   instrumentFamilyData.forEach((family, index) => {
     const option = document.createElement('option');
-    option.textContent = family.name; //
+    option.textContent = family.name;
     option.value = index;
     this.element.appendChild(option);
   });
