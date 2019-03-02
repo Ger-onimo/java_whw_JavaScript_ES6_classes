@@ -21,7 +21,6 @@ publishFamilyDetail (selectedIndex) {
   const selectedFamily = this.data[selectedIndex];
   PubSub.publish('InstrumentFamilies:selected-family-ready', selectedFamily)
 };
-
 }
 // end
 

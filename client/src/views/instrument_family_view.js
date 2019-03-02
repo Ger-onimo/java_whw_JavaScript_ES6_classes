@@ -1,10 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
 
-// 1. Replace with class syntax
-//const InstrumentFamilyView = function (container) {
-//  this.container = container;
-//};
-
 // 1. refactored class syntax
 class InstrumentFamilyView {
   constructor(container){
@@ -23,7 +18,7 @@ bindEvents () {
 render(family) {
   this.container.innerHTML = '';
 
-  const familyName = this.createElement('h2', family.name);
+  const familyName = this.createElement('h2', name); // refactored from family.name
   this.container.appendChild(familyName);
 
   const familyDescription = this.createElement('p', family.description);
@@ -57,6 +52,11 @@ createInstrumentList(instruments) {
 };
 }
 // end
+
+// 1. Replace with class syntax
+//const InstrumentFamilyView = function (container) {
+//  this.container = container;
+//};
 
 // 2. Replace with method syntax
 //InstrumentFamilyView.prototype.bindEvents = function () {

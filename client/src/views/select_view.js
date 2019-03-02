@@ -1,10 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
 
-// 1. Replace with class syntax
-//const SelectView = function (element) {
-//  this.element = element;
-//};
-
 // 1. refactored class syntax
 class SelectView {
   constructor(element){
@@ -26,16 +21,20 @@ bindEvents() {
 
 // 3. refactored method syntax
 populate(instrumentFamilyData) {
-  instrumentFamilyData.forEach((familiy, index) => {
+  instrumentFamilyData.forEach((family, index) => {
     const option = document.createElement('option');
-    option.textContent = familiy.name;
+    option.textContent = family.name; //
     option.value = index;
     this.element.appendChild(option);
   });
 };
-
 }
 // end
+
+// 1. Replace with class syntax
+//const SelectView = function (element) {
+//  this.element = element;
+//};
 
 // 2. Replace with method syntax
 //SelectView.prototype.bindEvents = function () {
