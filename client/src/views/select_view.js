@@ -24,7 +24,15 @@ bindEvents() {
   });
 };
 
-
+// 3. refactored method syntax
+populate(instrumentFamilyData) {
+  instrumentFamilyData.forEach((familiy, index) => {
+    const option = document.createElement('option');
+    option.textContent = familiy.name;
+    option.value = index;
+    this.element.appendChild(option);
+  });
+};
 
 }
 // end
@@ -42,13 +50,14 @@ bindEvents() {
 //  });
 //};
 
-SelectView.prototype.populate = function (instrumentFamilyData) {
-  instrumentFamilyData.forEach((familiy, index) => {
-    const option = document.createElement('option');
-    option.textContent = familiy.name;
-    option.value = index;
-    this.element.appendChild(option);
-  });
-};
+// 3. Replace with method syntax
+//SelectView.prototype.populate = function (instrumentFamilyData) {
+//  instrumentFamilyData.forEach((familiy, index) => {
+//    const option = document.createElement('option');
+//    option.textContent = familiy.name;
+//    option.value = index;
+//    this.element.appendChild(option);
+//  });
+//};
 
 module.exports = SelectView;

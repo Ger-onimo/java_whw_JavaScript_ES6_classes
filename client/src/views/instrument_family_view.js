@@ -11,16 +11,25 @@ class InstrumentFamilyView {
   this.container = container;
   }
 
-
-}
-// end
-
-InstrumentFamilyView.prototype.bindEvents = function () {
+// 2. refactored method syntax
+bindEvents () {
   PubSub.subscribe('InstrumentFamilies:selected-family-ready', (evt) => {
     const instrumentFamily = evt.detail;
     this.render(instrumentFamily);
   });
 };
+
+
+}
+// end
+
+// 2. Replace with method syntax
+//InstrumentFamilyView.prototype.bindEvents = function () {
+//  PubSub.subscribe('InstrumentFamilies:selected-family-ready', (evt) => {
+//    const instrumentFamily = evt.detail;
+//    this.render(instrumentFamily);
+//  });
+//};
 
 InstrumentFamilyView.prototype.render = function (family) {
   this.container.innerHTML = '';
