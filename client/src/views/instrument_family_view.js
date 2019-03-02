@@ -15,19 +15,19 @@ bindEvents () {
 };
 
 // 3. refactored method syntax
-render(name, description, instruments) {
+render({name, description, instruments}) {
   this.container.innerHTML = '';
 
-  const familyName = this.createElement('h2', name); // TODO refactored from family.name
+  const familyName = this.createElement('h2', name); // refactored
   this.container.appendChild(familyName);
 
-  const familyDescription = this.createElement('p', description);
+  const familyDescription = this.createElement('p', description); //refactored
   this.container.appendChild(familyDescription);
 
   const instrumentListTitle = this.createElement('h3', 'Instruments include:');
   this.container.appendChild(instrumentListTitle);
 
-  const instrumentList = this.createInstrumentList(instruments);
+  const instrumentList = this.createInstrumentList(instruments); //refactored
   this.container.appendChild(instrumentList);
 };
 
