@@ -11,11 +11,8 @@ class SelectView {
   this.element = element;
   }
 
-
-}
-// end
-
-SelectView.prototype.bindEvents = function () {
+// 2. refactored method syntax
+bindEvents() {
   PubSub.subscribe('InstrumentFamilies:data-ready', (evt) => {
     const allInstrumentFamilies = evt.detail;
     this.populate(allInstrumentFamilies);
@@ -26,6 +23,24 @@ SelectView.prototype.bindEvents = function () {
     PubSub.publish('SelectView:change', selectedIndex);
   });
 };
+
+
+
+}
+// end
+
+// 2. Replace with method syntax
+//SelectView.prototype.bindEvents = function () {
+//  PubSub.subscribe('InstrumentFamilies:data-ready', (evt) => {
+//    const allInstrumentFamilies = evt.detail;
+//    this.populate(allInstrumentFamilies);
+//  });
+//
+//  this.element.addEventListener('change', (evt) => {
+//    const selectedIndex = evt.target.value;
+//    PubSub.publish('SelectView:change', selectedIndex);
+//  });
+//};
 
 SelectView.prototype.populate = function (instrumentFamilyData) {
   instrumentFamilyData.forEach((familiy, index) => {

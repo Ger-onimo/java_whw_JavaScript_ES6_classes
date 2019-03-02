@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddc0be8c-ea25-438b-918a-89fafed6a45b" name="Default Changelist" comment="" />
+    <list default="true" id="ddc0be8c-ea25-438b-918a-89fafed6a45b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/client/src/models/instrument_families.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/models/instrument_families.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/select_view.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/select_view.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,32 +33,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="388" />
+          <entry key="js" value="395" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="388" />
+          <entry key="JavaScript" value="395" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/models/instrument_families.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="362">
+              <caret line="31" selection-start-line="31" selection-end-line="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/views/select_view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="2" selection-start-line="2" selection-end-line="3" />
+            <state relative-caret-position="257">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -87,9 +90,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/views/select_view.js" />
         <option value="$PROJECT_DIR$/client/src/views/instrument_family_view.js" />
         <option value="$PROJECT_DIR$/client/src/models/instrument_families.js" />
+        <option value="$PROJECT_DIR$/client/src/views/select_view.js" />
       </list>
     </option>
   </component>
@@ -97,7 +100,7 @@
     <option name="x" value="3" />
     <option name="y" value="23" />
     <option name="width" value="1248" />
-    <option name="height" value="471" />
+    <option name="height" value="644" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -177,7 +180,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="23" width="1248" height="471" extended-state="0" />
+    <frame x="3" y="23" width="1248" height="644" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -223,13 +226,6 @@
     <entry file="file://$PROJECT_DIR$/client/public/js/bundle.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/views/select_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -245,7 +241,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/models/instrument_families.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
+        <state relative-caret-position="362">
+          <caret line="31" selection-start-line="31" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/select_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>

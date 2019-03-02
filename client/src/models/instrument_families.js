@@ -16,6 +16,12 @@ bindEvents () {
   });
 };
 
+// 3. Refactored method syntax
+publishFamilyDetail (selectedIndex) {
+  const selectedFamily = this.data[selectedIndex];
+  PubSub.publish('InstrumentFamilies:selected-family-ready', selectedFamily)
+};
+
 }
 // end
 
@@ -34,10 +40,11 @@ bindEvents () {
 //  });
 //};
 
-InstrumentFamilies.prototype.publishFamilyDetail = function (selectedIndex) {
-  const selectedFamily = this.data[selectedIndex];
-  PubSub.publish('InstrumentFamilies:selected-family-ready', selectedFamily)
-};
+// 3. Replace with method syntax
+//InstrumentFamilies.prototype.publishFamilyDetail = function (selectedIndex) {
+//  const selectedFamily = this.data[selectedIndex];
+//  PubSub.publish('InstrumentFamilies:selected-family-ready', selectedFamily)
+//};
 
 
 
