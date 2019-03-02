@@ -43,6 +43,18 @@ createElement (elementType, text) {
   return element;
 };
 
+// 5. refactored method syntax
+createInstrumentList(instruments) {
+  const list = document.createElement('ul');
+
+  instruments.forEach((instrument) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = instrument;
+    list.appendChild(listItem);
+  });
+
+  return list;
+};
 }
 // end
 
@@ -78,16 +90,17 @@ createElement (elementType, text) {
 //  return element;
 //};
 
-InstrumentFamilyView.prototype.createInstrumentList = function (instruments) {
-  const list = document.createElement('ul');
-
-  instruments.forEach((instrument) => {
-    const listItem = document.createElement('li');
-    listItem.textContent = instrument;
-    list.appendChild(listItem);
-  });
-
-  return list;
-};
+// 5. Replace with method syntax
+//InstrumentFamilyView.prototype.createInstrumentList = function (instruments) {
+//  const list = document.createElement('ul');
+//
+//  instruments.forEach((instrument) => {
+//    const listItem = document.createElement('li');
+//    listItem.textContent = instrument;
+//    list.appendChild(listItem);
+//  });
+//
+//  return list;
+//};
 
 module.exports = InstrumentFamilyView;
