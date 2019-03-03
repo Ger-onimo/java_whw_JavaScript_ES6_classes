@@ -3,7 +3,7 @@ const PubSub = require('../helpers/pub_sub.js');
 //import defaultExport from "../helpers/pub_sub.js";
 
 // 1. refactored class syntax
-class InstrumentFamilies{
+export default class InstrumentFamilies{ // refactored export to app.js
   constructor(data){
   this.data = data;
   }
@@ -49,4 +49,4 @@ publishFamilyDetail(selectedIndex) {
 
 
 
-module.exports = InstrumentFamilies;
+//module.exports = InstrumentFamilies;
