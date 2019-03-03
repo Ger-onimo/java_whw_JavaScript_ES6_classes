@@ -1,7 +1,7 @@
 const PubSub = require('../helpers/pub_sub.js');
 
 // 1. refactored class syntax
-class SelectView {
+export default class SelectView { // refactored export to app.js
   constructor(element){
   this.element = element;
   }
@@ -59,4 +59,4 @@ populate(instrumentFamilyData) {
 //  });
 //};
 
-module.exports = SelectView;
+//module.exports = SelectView;
