@@ -1,13 +1,13 @@
 const PubSub = require('../helpers/pub_sub.js');
 
 // 1. refactored class syntax
-class InstrumentFamilyView {
+export default class InstrumentFamilyView { // refactored export to app.js
   constructor(container){
   this.container = container;
   }
 
 // 2. refactored method syntax
-bindEvents () {
+bindEvents() {
   PubSub.subscribe('InstrumentFamilies:selected-family-ready', (evt) => {
     const instrumentFamily = evt.detail;
     this.render(instrumentFamily);
@@ -15,24 +15,25 @@ bindEvents () {
 };
 
 // 3. refactored method syntax
+// refactored render to destruct family properties
 render({name, description, instruments}) {
   this.container.innerHTML = '';
 
-  const familyName = this.createElement('h2', name); // refactored
+  const familyName = this.createElement('h2', name); // destruction of family properties
   this.container.appendChild(familyName);
 
-  const familyDescription = this.createElement('p', description); //refactored
+  const familyDescription = this.createElement('p', description); // destruction of family properties
   this.container.appendChild(familyDescription);
 
   const instrumentListTitle = this.createElement('h3', 'Instruments include:');
   this.container.appendChild(instrumentListTitle);
 
-  const instrumentList = this.createInstrumentList(instruments); //refactored
+  const instrumentList = this.createInstrumentList(instruments); // destruction of family properties
   this.container.appendChild(instrumentList);
 };
 
 // 4. refactored method syntax
-createElement (elementType, text) {
+createElement(elementType, text) {
   const element = document.createElement(elementType);
   element.textContent = text;
   return element;
@@ -51,6 +52,7 @@ createInstrumentList(instruments) {
   return list;
 };
 }
+
 // end
 
 // 1. Replace with class syntax
@@ -103,4 +105,6 @@ createInstrumentList(instruments) {
 //  return list;
 //};
 
-module.exports = InstrumentFamilyView;
+//module.exports = InstrumentFamilyView;
+
+

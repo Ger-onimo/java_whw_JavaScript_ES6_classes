@@ -1,6 +1,9 @@
+// refactored Imports:
+import InstrumentFamilyView from './views/instrument_family_view.js';
+
 const InstrumentFamilies = require('./models/instrument_families.js');
 const SelectView = require('./views/select_view.js');
-const InstrumentFamilyView = require('./views/instrument_family_view.js');
+//const InstrumentFamilyView = require('./views/instrument_family_view.js');
 const data = require('./data/instrument_families.js');
 
 document.addEventListener('DOMContentLoaded', () => {

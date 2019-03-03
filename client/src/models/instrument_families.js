@@ -1,5 +1,7 @@
 const PubSub = require('../helpers/pub_sub.js');
 
+//import defaultExport from "../helpers/pub_sub.js";
+
 // 1. refactored class syntax
 class InstrumentFamilies{
   constructor(data){
@@ -7,7 +9,7 @@ class InstrumentFamilies{
   }
 
 // 2. refactored method syntax
-bindEvents () {
+bindEvents() {
   PubSub.publish('InstrumentFamilies:data-ready', this.data);
 
   PubSub.subscribe('SelectView:change', (evt) => {
@@ -17,7 +19,7 @@ bindEvents () {
 };
 
 // 3. Refactored method syntax
-publishFamilyDetail (selectedIndex) {
+publishFamilyDetail(selectedIndex) {
   const selectedFamily = this.data[selectedIndex];
   PubSub.publish('InstrumentFamilies:selected-family-ready', selectedFamily)
 };
