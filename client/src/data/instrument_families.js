@@ -26,5 +26,7 @@ const instrumentFamilies = [
   }
 ];
 
-//module.exports = instrumentFamilies;
+// refactored export
 export default instrumentFamilies;
+//module.exports = instrumentFamilies;
+
