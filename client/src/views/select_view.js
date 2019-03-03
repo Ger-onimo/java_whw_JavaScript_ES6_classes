@@ -1,4 +1,7 @@
-const PubSub = require('../helpers/pub_sub.js');
+//const PubSub = require('../helpers/pub_sub.js');
+
+// refactor pubsub import
+import PubSub from '../helpers/pub_sub.js';
 
 // 1. refactored class syntax
 export default class SelectView { // refactored export to app.js

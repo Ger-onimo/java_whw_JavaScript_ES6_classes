@@ -11,7 +11,7 @@ const PubSub = {
   }
 };
 
-module.exports = PubSub;
+//module.exports = PubSub;
 
-//export default PubSub
+export default PubSub;
 
