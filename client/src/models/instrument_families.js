@@ -4,7 +4,7 @@
 import PubSub from '../helpers/pub_sub.js';
 
 // 1. refactored class syntax
-export default class InstrumentFamilies{ // refactored export to app.js
+class InstrumentFamilies{ // refactored export to app.js
   constructor(data){
   this.data = data;
   }
@@ -25,6 +25,8 @@ publishFamilyDetail(selectedIndex) {
   PubSub.publish('InstrumentFamilies:selected-family-ready', selectedFamily)
 };
 }
+
+export default InstrumentFamilies
 // end
 
 // 1. Replace with class syntax

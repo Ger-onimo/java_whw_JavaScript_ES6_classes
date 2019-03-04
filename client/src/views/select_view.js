@@ -4,7 +4,7 @@
 import PubSub from '../helpers/pub_sub.js';
 
 // 1. refactored class syntax
-export default class SelectView { // refactored export to app.js
+class SelectView { // refactored export to app.js
   constructor(element){
   this.element = element;
   }
@@ -32,6 +32,8 @@ populate(instrumentFamilyData) {
   });
 };
 }
+
+export default SelectView
 // end
 
 // 1. Replace with class syntax
